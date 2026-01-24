@@ -12,7 +12,7 @@ import { FaStickyNote, FaSearch, FaFileAlt, FaGithub, FaSpinner, FaFolder, FaChe
 
 // GitHub API configuration
 const GITHUB_API_BASE = 'https://api.github.com';
-const REPO_OWNER = 'TacitusXI';
+const REPO_OWNER = 'TacitvsXI';
 const REPO_NAME = 't-notes';
 
 interface GitHubFile {
@@ -1144,7 +1144,7 @@ export default function NotesSection() {
               <FaGithub />
               <span>Browse Repository</span>
             </ExternalLink>
-            <ExternalLink href="https://tacitusxi.github.io/t-notes/" target="_blank" rel="noopener noreferrer" style={{ marginBottom: '0.75rem' }}>
+            <ExternalLink href="https://tacitvsxi.github.io/t-notes/" target="_blank" rel="noopener noreferrer" style={{ marginBottom: '0.75rem' }}>
               <FaExternalLinkAlt />
               <span>Open Quartz Site</span>
             </ExternalLink>

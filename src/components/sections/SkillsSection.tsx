@@ -202,21 +202,12 @@ export default function SkillsSection() {
       }))
     },
     {
-      name: skills[3].category, // DevOps
+      name: skills[3].category, // Tools & Others
       color: "linear-gradient(90deg, rgb(255, 0, 0), rgb(255, 128, 0))",
       skills: skills[3].items.map((item: string) => ({
         name: item,
         level: "Advanced",
         percentage: 80
-      }))
-    },
-    {
-      name: skills[4].category, // Tools
-      color: "linear-gradient(90deg, rgb(128, 0, 255), rgb(255, 0, 128))",
-      skills: skills[4].items.map((item: string) => ({
-        name: item,
-        level: "Advanced",
-        percentage: 85
       }))
     }
   ];

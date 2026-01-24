@@ -6,42 +6,7 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { FaQuoteLeft, FaQuoteRight } from 'react-icons/fa';
 import Image from 'next/image';
 import { useInView } from 'react-intersection-observer';
-
-// Types
-interface Recommendation {
-  id: number;
-  name: string;
-  position: string;
-  image: string;
-  fallbackImage?: string;
-  text: string;
-  date: string;
-  connection: string;
-}
-
-// Sample recommendation data
-const recommendations: Recommendation[] = [
-  {
-    id: 1,
-    name: "Reigner Ouano",
-    position: "Acumatica ERP Specialist | Expertise in C#, Blazor, and Blockchain",
-    image: "/images/recommendations/reigner.jpeg",
-    fallbackImage: "https://randomuser.me/api/portraits/men/32.jpg",
-    text: "I had the privilege of working with Ivan Leskov at BlockTrust, where he demonstrated exceptional skills as a blockchain developer. Ivan's proficiency in blockchain technology, including his work with Solidity, is truly impressive. He has a deep understanding of both front-end and back-end development, which he combines with a genuine enthusiasm for learning and growing in the field.\n\nIvan's technical expertise is complemented by his eagerness to tackle new challenges. Whether developing complex blockchain solutions or collaborating on diverse projects, his ability to adapt and contribute effectively was evident. His commitment to continuous learning and improvement makes him a valuable asset to any team.\n\nIvan's contributions to our projects were invaluable, and his positive attitude and collaborative spirit made working with him a pleasure. I have no doubt that he will continue to excel and bring significant value to future endeavors. I highly recommend Ivan for any role that demands expertise in blockchain development and a passion for innovation.",
-    date: "September 15, 2024",
-    connection: "Reigner worked with Ivan on the same team"
-  },
-  {
-    id: 2,
-    name: "Stefano Tempesta",
-    position: "Web3 Architect | AI & Blockchain for Good Ambassador | Scout Leader",
-    image: "/images/recommendations/stefano.jpeg",
-    fallbackImage: "https://randomuser.me/api/portraits/men/67.jpg",
-    text: "Had the pleasure of working with Ivan at BlockTrust. We built web3 technology that lasts, running 24/7 without interruption of service. Diligent, precise, reliable, and extremely experienced on all smart contract matters, Ivan is a highly skilled software engineer, versatile across multiple technologies. Pointless to say, I'd hire him over again, no questions asked!",
-    date: "September 14, 2024",
-    connection: "Stefano managed Ivan directly"
-  }
-];
+import { recommendations } from '@/data/content';
 
 // Styled components with classic theme matching other sections
 const RecommendationsContainer = styled.section`
@@ -180,6 +145,39 @@ const LinkedInBadge = styled.div`
     font-size: 0.9rem;
     color: rgba(255, 255, 255, 0.7);
   }
+`;
+
+const ReferenceLink = styled.a`
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: 15px;
+  padding: 10px 16px;
+  background: rgba(115, 74, 253, 0.1);
+  border: 1px solid rgba(115, 74, 253, 0.3);
+  border-radius: 8px;
+  color: rgb(115, 74, 253);
+  font-size: 0.9rem;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  
+  &:hover {
+    background: rgba(115, 74, 253, 0.2);
+    border-color: rgba(115, 74, 253, 0.5);
+    transform: translateY(-2px);
+  }
+  
+  svg {
+    font-size: 1rem;
+  }
+`;
+
+const ReferenceNote = styled.p`
+  font-size: 0.75rem;
+  color: rgba(255, 255, 255, 0.4);
+  font-style: italic;
+  margin-top: 8px;
+  margin-left: 4px;
 `;
 
 const NavigationButton = styled.button<{ direction: 'left' | 'right' }>`
@@ -330,19 +328,21 @@ export default function RecommendationsSection() {
               </RecommendationText>
               
               <ProfileInfo>
-                <ProfileImageContainer>
-                  <Image
-                    src={recommendations[currentIndex].image}
-                    alt={recommendations[currentIndex].name}
-                    fill
-                    sizes="(max-width: 768px) 60px, 70px"
-                    style={{ 
-                      objectFit: 'cover',
-                      borderRadius: '50%' /* Ensure the image itself is also circular */
-                    }}
-                    onError={handleImageError}
-                  />
-                </ProfileImageContainer>
+                {recommendations[currentIndex].image && (
+                  <ProfileImageContainer>
+                    <Image
+                      src={recommendations[currentIndex].image}
+                      alt={recommendations[currentIndex].name}
+                      fill
+                      sizes="(max-width: 768px) 60px, 70px"
+                      style={{ 
+                        objectFit: 'cover',
+                        borderRadius: '50%' /* Ensure the image itself is also circular */
+                      }}
+                      onError={handleImageError}
+                    />
+                  </ProfileImageContainer>
+                )}
                 <ProfileDetails>
                   <Name>{recommendations[currentIndex].name}</Name>
                   <Position>{recommendations[currentIndex].position}</Position>
@@ -352,8 +352,35 @@ export default function RecommendationsSection() {
               
               <LinkedInBadge>
                 <FaQuoteRight />
-                <span>LinkedIn Recommendation · {recommendations[currentIndex].date}</span>
+                <span>
+                  {recommendations[currentIndex].connection === "Personal testimonial from investor" 
+                    ? `Personal Conversation · ${recommendations[currentIndex].date}`
+                    : recommendations[currentIndex].connection.includes("Genuine client comments")
+                    ? `Social Media Comments · ${recommendations[currentIndex].date}`
+                    : `LinkedIn Recommendation · ${recommendations[currentIndex].date}`
+                  }
+                </span>
               </LinkedInBadge>
+              
+              {recommendations[currentIndex].link && (
+                <>
+                  <ReferenceLink 
+                    href={recommendations[currentIndex].link!.url} 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                  >
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" width="16" height="16">
+                      <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+                      <polyline points="15 3 21 3 21 9"></polyline>
+                      <line x1="10" y1="14" x2="21" y2="3"></line>
+                    </svg>
+                    {recommendations[currentIndex].link!.title}
+                  </ReferenceLink>
+                  <ReferenceNote>
+                    * SLON is my previous Twitter account used for TA market analysis back in time
+                  </ReferenceNote>
+                </>
+              )}
             </RecommendationCard>
           </AnimatePresence>
           

@@ -114,6 +114,44 @@ const ContactValue = styled.p`
   }
 `;
 
+const PGPFingerprint = styled.code`
+  display: block;
+  font-size: 0.85rem;
+  color: rgba(255, 255, 255, 0.6);
+  font-family: 'Courier New', monospace;
+  background: rgba(0, 0, 0, 0.3);
+  padding: 0.4rem 0.6rem;
+  border-radius: 4px;
+  margin-top: 0.5rem;
+  border: 1px solid rgba(115, 74, 253, 0.2);
+`;
+
+const PGPLinks = styled.div`
+  display: flex;
+  gap: 1rem;
+  margin-top: 0.5rem;
+  font-size: 0.85rem;
+  
+  a {
+    color: rgba(115, 74, 253, 0.9);
+    text-decoration: none;
+    transition: all 0.2s ease;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.3rem;
+    
+    &:hover {
+      color: rgb(115, 74, 253);
+      text-decoration: underline;
+    }
+    
+    svg {
+      width: 12px;
+      height: 12px;
+    }
+  }
+`;
+
 const SocialLinks = styled(motion.div)`
   display: flex;
   gap: 1rem;
@@ -465,42 +503,31 @@ Email: ${formState.email}
               <ContactValue>
                 <a href={`mailto:${personalInfo.email}`}>{personalInfo.email}</a>
               </ContactValue>
+              <ContactValue style={{ marginTop: '0.8rem', fontSize: '0.9rem', display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" style={{ width: '16px', height: '16px', color: 'rgba(115, 74, 253, 0.8)' }}>
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z" />
+                </svg>
+                I prefer using PGP for sensitive communications
+              </ContactValue>
+              <PGPFingerprint>
+                4846 4E53 55CC 30E7 C9B4  D473 7CEA 8546 6E5E 75B2
+              </PGPFingerprint>
+              <PGPLinks>
+                <a href="https://github.com/TacitvsXI.gpg" target="_blank" rel="noopener noreferrer">
+                  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M7 16a4 4 0 01-.88-7.903A5 5 0 1115.9 6L16 6a5 5 0 011 9.9M15 13l-3-3m0 0l-3 3m3-3v12" />
+                  </svg>
+                  Public Key
+                </a>
+                <a href="https://github.com/pcaversaccio/gpg-sign-and-encrypt" target="_blank" rel="noopener noreferrer">
+                  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                  </svg>
+                  Usage Guide
+                </a>
+              </PGPLinks>
             </ContactDetail>
           </ContactMethod>
-          
-          <ContactMethod variants={itemVariants}>
-            <ContactIcon>
-              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6" />
-              </svg>
-            </ContactIcon>
-            <ContactDetail>
-              <ContactLabel>Location</ContactLabel>
-              <ContactValue>{personalInfo.location}</ContactValue>
-            </ContactDetail>
-          </ContactMethod>
-          
-          <ContactMethod variants={itemVariants}>
-            <ContactIcon>
-              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2 2v2m4 6h.01M5 20h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
-              </svg>
-            </ContactIcon>
-            <ContactDetail>
-              <ContactLabel>Availability</ContactLabel>
-              <ContactValue>Freelance / Part-time / Full-time</ContactValue>
-            </ContactDetail>
-          </ContactMethod>
-          
-          <SocialLinks variants={containerVariants}>
-            {personalInfo.socials?.map((social: { name: string; url: string; icon: React.ReactNode }) => (
-              <SocialLinkWrapper key={social.name} variants={itemVariants}>
-                <SocialLink href={social.url} target="_blank" rel="noopener noreferrer">
-                  {social.icon}
-                </SocialLink>
-              </SocialLinkWrapper>
-            ))}
-          </SocialLinks>
         </ContactInfo>
         
         <FormContainer

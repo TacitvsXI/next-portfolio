@@ -194,7 +194,7 @@ const projectsData = [
       "Tacitus-specific token integration"
     ],
     links: {
-      github: "https://github.com/TacitusXI/tacitus-swap",
+      github: "https://github.com/TacitvsXI/tacitus-swap",
       live: "https://tacitus-swap.vercel.app/"
     }
   },
@@ -225,7 +225,7 @@ const projectsData = [
       "Smart contract-based ownership"
     ],
     links: {
-      github: "https://github.com/TacitusXI/TechnoirClub-Marketplace"
+      github: "https://github.com/TacitvsXI/TechnoirClub-Marketplace"
     }
   },
   {
@@ -254,7 +254,7 @@ const projectsData = [
       "Automated market making"
     ],
     links: {
-      github: "https://github.com/TacitusXI/LeskoDEX"
+      github: "https://github.com/TacitvsXI/LeskoDEX"
     }
   },
   {
@@ -284,7 +284,7 @@ const projectsData = [
       "Cross-chain compatibility"
     ],
     links: {
-      github: "https://github.com/TacitusXI/LIQUID-DEX"
+      github: "https://github.com/TacitvsXI/LIQUID-DEX"
     }
   }
 ];
@@ -365,18 +365,18 @@ const Projects: React.FC = () => {
                       target="_blank"
                       rel="noopener noreferrer"
                     >
-                      <FaGithub /> {project.links.githubV1 ? 'v2 (Foundry)' : 'GitHub'}
+                      <FaGithub /> {(project.links as any).githubV1 ? 'v2 (Foundry)' : 'GitHub'}
                     </ProjectLink>
                   </motion.div>
                 )}
                 
-                {project.links.githubV1 && (
+                {(project.links as any).githubV1 && (
                   <motion.div
                     whileHover={{ scale: 1.05 }}
                     whileTap={{ scale: 0.95 }}
                   >
                     <ProjectLink 
-                      href={project.links.githubV1}
+                      href={(project.links as any).githubV1}
                       target="_blank"
                       rel="noopener noreferrer"
                     >

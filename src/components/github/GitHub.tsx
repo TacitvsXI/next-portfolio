@@ -273,7 +273,7 @@ const GitHub: React.FC = () => {
       try {
         // Get environment variables (they are exposed in the client when prefixed with NEXT_PUBLIC_)
         const token = process.env.NEXT_PUBLIC_GITHUB_TOKEN;
-        const username = process.env.NEXT_PUBLIC_GITHUB_USERNAME || 'TacitusXI';
+        const username = process.env.NEXT_PUBLIC_GITHUB_USERNAME || 'TacitvsXI';
         
         if (!token) {
           throw new Error('GitHub token not found in environment variables');

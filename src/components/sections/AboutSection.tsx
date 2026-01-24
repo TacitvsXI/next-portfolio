@@ -620,7 +620,7 @@ export default function AboutSection() {
             <h3>{personalInfo.name}</h3>
             <p className="neotech-text" style={{ fontSize: '0.95rem', marginTop: '0.25rem', marginBottom: '0.5rem' }}>
               <LatinText>
-                <span className="first-part">vel</span> <span className="second-part">TacitusXI</span>
+                <span className="first-part">vel</span> <span className="second-part">TacitvsXI</span>
               </LatinText>
             </p>
             <p>{personalInfo.title}</p>

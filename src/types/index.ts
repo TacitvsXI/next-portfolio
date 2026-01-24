@@ -80,11 +80,15 @@ export interface Recommendation {
   id: number;
   name: string;
   position: string;
-  image: string;
+  image?: string;
   fallbackImage?: string;
   text: string;
   date: string;
   connection: string;
+  link?: {
+    title: string;
+    url: string;
+  };
 }
 
 // GitHub related types
@@ -112,4 +116,22 @@ export interface GitHubStats {
   };
   longestStreak: number;
   currentStreak: number;
+}
+
+export interface Audit {
+  id: string;
+  title: string;
+  protocol: string;
+  date: string;
+  description: string;
+  severity?: {
+    critical?: number;
+    high?: number;
+    medium?: number;
+    low?: number;
+    informational?: number;
+  };
+  previewImage: string;
+  pdfPath: string;
+  tags?: string[];
 } 

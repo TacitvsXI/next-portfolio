@@ -83,7 +83,7 @@
               // For GitHub API, return static data
               if (origUrl.indexOf('/api/github') !== -1) {
                 return new Response(JSON.stringify({
-                  user: { login: "TacitusXI", name: "Ivan Leskov" },
+                  user: { login: "TacitvsXI", name: "Ivan Leskov" },
                   repos: [],
                   contributions: { totalCount: 0, weeks: [] }
                 }), {

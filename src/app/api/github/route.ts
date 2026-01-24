@@ -34,7 +34,7 @@ interface GitHubRepository {
 export async function GET() {
   try {
     const token = process.env.NEXT_PUBLIC_GITHUB_TOKEN;
-    const username = process.env.NEXT_PUBLIC_GITHUB_USERNAME || 'TacitusXI';
+    const username = process.env.NEXT_PUBLIC_GITHUB_USERNAME || 'TacitvsXI';
 
     if (!token) {
       return NextResponse.json(

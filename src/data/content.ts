@@ -1,6 +1,6 @@
 'use client';
 
-import { PersonalInfo, Experience, Project, Skill, Certificate, Publication, Language, Recommendation } from '@/types/index';
+import { PersonalInfo, Experience, Project, Skill, Certificate, Publication, Language, Recommendation, Audit } from '@/types/index';
 import { FaGithub, FaLinkedin, FaTwitter, FaMedium } from 'react-icons/fa';
 import React from 'react';
 
@@ -30,7 +30,7 @@ export const personalInfo: PersonalInfo = {
     },
     {
       name: "X (Twitter)",
-      url: "https://x.com/TacitusXI",
+      url: "https://x.com/TacitvsXI",
       icon: React.createElement(FaTwitter)
     },
     {
@@ -203,7 +203,7 @@ export const projects: Project[] = [
     period: "2024 - Present",
     description: "A comprehensive library of blockchain security audits and exploit analysis. Features detailed writeups of historic blockchain hacks, security vulnerabilities, and audit reports combining narrative storytelling with technical analysis.",
     links: {
-      github: "https://github.com/TacitusXI/dark-forest",
+      github: "https://github.com/TacitvsXI/dark-forest",
       live: "https://dark-forest.tacitvs.eth.limo"
     },
     githubInfo: {
@@ -226,7 +226,7 @@ export const projects: Project[] = [
     period: "March 2025",
     description: "A sophisticated fork of Uniswap with custom implementations and enhanced UI featuring cyberpunk aesthetics. Supports multiple chains and token swaps with optimized transaction processing.",
     links: {
-      github: "https://github.com/TacitusXI/tacitus-swap",
+      github: "https://github.com/TacitvsXI/tacitus-swap",
       live: "https://tacitus-swap.vercel.app/"
     },
     githubInfo: {
@@ -251,7 +251,7 @@ export const projects: Project[] = [
     period: "February 2025",
     description: "A Python-based trading bot that hedges impermanent loss in Uniswap V2 liquidity pools using Binance perpetual contracts. Features backtesting framework with historical data analysis and automated hedging execution.",
     links: {
-      github: "https://github.com/TacitusXI/defi-il-hedge-bot"
+      github: "https://github.com/TacitvsXI/defi-il-hedge-bot"
     },
     githubInfo: {
       stars: 3,
@@ -273,7 +273,7 @@ export const projects: Project[] = [
     period: "March 2025",
     description: "A utility tool for Ledger hardware wallet integration enabling secure transaction signing with multi-chain support. Provides seamless dApp interactions while maintaining hardware-based security.",
     links: {
-      github: "https://github.com/TacitusXI/ledger-signer"
+      github: "https://github.com/TacitvsXI/ledger-signer"
     },
     githubInfo: {
       stars: 1,
@@ -294,7 +294,7 @@ export const projects: Project[] = [
     period: "April 2022",
     description: "A decentralized exchange featuring an order book system and custom ERC-20 ESKO token for ETH/ESKO trading. Includes integrated charting tools and demo mode for exploring functionality without blockchain connection.",
     links: {
-      github: "https://github.com/TacitusXI/LeskoDEX",
+      github: "https://github.com/TacitvsXI/LeskoDEX",
       live: "https://lesko-dex.tacitvs.eth.limo"
     },
     githubInfo: {
@@ -319,7 +319,7 @@ export const projects: Project[] = [
     period: "August 2022",
     description: "A unique NFT collection of mutant robots with interactive marketplace. Features modifiable and reassemblable robots using interchangeable parts with over 999 trillion potential combinations.",
     links: {
-      github: "https://github.com/TacitusXI/TechnoirClub-Marketplace",
+      github: "https://github.com/TacitvsXI/TechnoirClub-Marketplace",
       live: "https://technoir.tacitvs.eth.limo"
     },
     githubInfo: {
@@ -344,7 +344,7 @@ export const projects: Project[] = [
     period: "January 2024",
     description: "A decentralized exchange built on the Stacks ecosystem for STX/LIQ trading using Clarity smart contracts. Features advanced wallet integration and liquidity management with the LIQUID SIP010 token.",
     links: {
-      github: "https://github.com/TacitusXI/LIQUID-DEX",
+      github: "https://github.com/TacitvsXI/LIQUID-DEX",
       live: "https://stacks-dex.vercel.app/"
     },
     githubInfo: {
@@ -369,8 +369,8 @@ export const projects: Project[] = [
     period: "2022 - 2025",
     description: "A provably fair decentralized lottery powered by Chainlink VRF and Automation. Showcases evolution from Hardhat (2022) to Foundry (2025) with 100% test coverage and multi-network deployment support.",
     links: {
-      github: "https://github.com/TacitusXI/Lottery.v2",
-      githubV1: "https://github.com/TacitusXI/Lottery"
+      github: "https://github.com/TacitvsXI/Lottery.v2",
+      githubV1: "https://github.com/TacitvsXI/Lottery"
     },
     githubInfo: {
       stars: 0,
@@ -407,11 +407,7 @@ export const skills: Skill[] = [
   },
   {
     category: "Tools & Others",
-    items: ["Git", "Integration Tests", "Unit Tests", "CI/CD", "Agile"]
-  },
-  {
-    category: "Soft Skills",
-    items: ["Leadership", "Problem Solving", "Attention to Detail", "Self-Motivated"]
+    items: ["Git", "Integration Tests", "Unit Tests", "Fuzzing Tests", "Staging Tests", "CI/CD", "Agile"]
   }
 ];
 
@@ -481,8 +477,8 @@ export const languages: Language[] = [
 
 // GitHub Information
 export const githubInfo = {
-  username: "TacitusXI",
-  profileUrl: "https://github.com/TacitusXI",
+  username: "TacitvsXI",
+  profileUrl: "https://github.com/TacitvsXI",
   bio: "Security researcher | Blockchain security expert",
   featuredRepos: [
     {
@@ -490,21 +486,21 @@ export const githubInfo = {
       description: "A collection of secure and optimized NFT smart contracts with ERC-721 and ERC-1155 implementations",
       languages: ["Solidity", "JavaScript"],
       stars: 7,
-      url: "https://github.com/TacitusXI/NFT-Smart-Contracts"
+      url: "https://github.com/TacitvsXI/NFT-Smart-Contracts"
     },
     {
       name: "DEX-Prototype",
       description: "Decentralized exchange prototype with AMM functionality and liquidity pool implementation",
       languages: ["Solidity", "TypeScript", "React"],
       stars: 5,
-      url: "https://github.com/TacitusXI/DEX-Prototype"
+      url: "https://github.com/TacitvsXI/DEX-Prototype"
     },
     {
       name: "Solidity-Design-Patterns",
       description: "Implementation and explanation of common Solidity design patterns and best practices",
       languages: ["Solidity", "Markdown"],
       stars: 8,
-      url: "https://github.com/TacitusXI/Solidity-Design-Patterns"
+      url: "https://github.com/TacitvsXI/Solidity-Design-Patterns"
     }
   ]
 };
@@ -525,12 +521,44 @@ export const recommendations: Recommendation[] = [
     id: 2,
     name: "Stefano Tempesta",
     position: "Web3 Architect | AI & Blockchain for Good Ambassador | Scout Leader",
-    image: "./images/recommendations/stefano.jpeg", // Primary path
+    image: "./images/recommendations/stefano2.jpeg", // Primary path
     fallbackImage: "https://randomuser.me/api/portraits/men/67.jpg", // Fallback image
     text: "Had the pleasure of working with Ivan at BlockTrust. We built web3 technology that lasts, running 24/7 without interruption of service. Diligent, precise, reliable, and extremely experienced on all smart contract matters, Ivan is a highly skilled software engineer, versatile across multiple technologies. Pointless to say, I'd hire him over again, no questions asked!",
     date: "September 14, 2024",
     connection: "Stefano managed Ivan directly"
+  },
+  {
+    id: 3,
+    name: "Aaron Rye Matawaran",
+    position: "Frontend Web Developer",
+    image: "./images/recommendations/aaron.jpeg", // Primary path
+    fallbackImage: "https://randomuser.me/api/portraits/men/45.jpg", // Fallback image
+    text: "I've had the pleasure of working with Ivan, and he's a highly skilled Blockchain and Web3 engineer. His expertise in Solidity and smart contracts, along with his problem-solving ability and professionalism, make him a reliable and valuable team member. I highly recommend him for any blockchain-related projects.",
+    date: "April 21, 2025",
+    connection: "Aaron Rye worked with Ivan on the same team"
+  },
+  {
+    id: 4,
+    name: "Bruno",
+    position: "Private Investor | Rio de Janeiro, Brazil",
+    image: "./images/recommendations/bruno.jpg", // Primary path
+    fallbackImage: "https://randomuser.me/api/portraits/men/52.jpg", // Fallback image
+    text: "I'll introduce myself: my name is Bruno, I'm 43 years old, I'm Brazilian, resident in Brazil, more precisely in the city of Rio de Janeiro, in the Copacabana neighborhood. [8:27 PM]\n\nI started my way in the cryptocurrency market because I was disappointed with the financial returns obtained through traditional investments. Studying this market, I came across your twitter account. [8:42 PM]\n\nBasically, I invest my money to, in the future, cover my daughter's college expenses, as she intends to be a doctor and this course is very expensive in Brazil. [8:46 PM]\n\nAfter I started following your account, my income improved a lot. [8:51 PM]\n\nDue to your knowledge, today I have more hope that I will be able to pay for my daughter's education. And there is no word that can represent how grateful I am to you. [8:56 PM]\n\nI will repeat, your analysis is amazing. You are the only person on Twitter who does analytics with accurate dates. I can't imagine how you do this or how much knowledge you have to accumulate, but the result is impressive. [9:48 PM]\n\nSo I decided to do a survey of analysts who were on the internet (youtube, twitter, instagram, etc.). I surveyed the results of past analyses. The study was crude. Basically, I pasted the Twitter screens into a WORD file and then searched if the expected result had taken place and marked an OK, if yes, an X, if not a //, if it had been approximated. Did you get it? [9:50 PM]\n\nIn that rising, you were amazing. I think you are on the same level as PlanB. [9:54 PM]\n\nThe goals of your analysis are different. You focus on forecasting market ups and downs and he on studying the asset's ability to appreciate. [9:56 PM]\n\nYou are a genius. Although having money is not the most important thing in life (and it is not and never will be, have faith in it), you should have high goals and dreams. Think big. Humanity needs to find out who you are and what you can do. [9:58 PM]\n\nYou need to make a promise. And that promise will be yours alone and it will also be your secret. Every day you will ask the following to GOD: GOD, keep me humble. [10:01 PM]\n\nKeep yourself humble. Ever. This attitude will allow you to remain aware of changes in life and the world.",
+    date: "October 16, 2021",
+    connection: "Personal testimonial from investor",
+    link: {
+      title: "Market Reversal Prediction - July 21, 2021",
+      url: "https://x.com/___SLON___/status/1415278030034018306"
+    }
   }
+  // {
+  //   id: 5,
+  //   name: "Client Comments Collection",
+  //   position: "Genuine Comments Under Marketing Posts | 2020",
+  //   text: "Svitlana Masaz: \"Ivan is truly a remarkable person, I recommend 😎\"\n\nTatyana Bodenchuk: \"Vanya, you are very honest, good guy! I sincerely thank you for everything.\"\n\nViacheslav Drachenko: \"I know him personally. Truly professional approach, fast and most importantly with understanding. I RECOMMEND TO EVERYONE.\"\n\nEmma Rachel: \"Met Ivan by chance. Very pleasant young man, courteous, attentive. I recommend 👍👍👍\"\n\nLyudmila Shmalko: \"About Ivan, I can only say good words, thank you to him, he even helped me buy plane tickets.\"\n\nNatali Kovchar: \"Thank you, Ivan, for being there! Thank you for helping people!\"\n\nKonstantin Nor: \"Best employee!\"\n\nTamila Boyko Golenkova: \"Currently in Ukraine but was in Legnica opening an account at ING bank. Ivan is very decent, competent in all matters. I RECOMMEND.\"\n\nLena Alena: \"Very good reviews about you Ivan, I want to meet you, need a consultation.....\"\n\nAlla Grishchenko: \"I confirm the excellent reviews, contact him, you will be satisfied with Ivan's help.\"\n\nIryna Zubkova: \"Opened a card with Ivan on the spot, everything was fast and he answered all questions + contacted via Viber and phone for consultation. Don't worry, he's a verified specialist!\"\n\nIryna Kriachok: \"Opened an ING account through Ivan, no regrets, very kind and responsive person. Thank you so much.\"",
+  //   date: "2020",
+  //   connection: "Genuine client comments under marketing posts (Translated from Ukrainian/Russian)"
+  // }
 ];
 
 // Add a reading section
@@ -558,5 +586,57 @@ export const reading = [
     author: "Grant Cardone",
     description: "A powerful framework for achieving extraordinary success by setting massive goals and taking massive action. Cardone's principles on goal setting, work ethic, and persistence are particularly relevant for trading and business success.",
     category: "Personal Development"
+  }
+];
+
+// Security Audits
+export const audits: Audit[] = [
+  {
+    id: "classical-dark-1",
+    title: "Smart Contract Security Audit",
+    protocol: "DeFi Protocol",
+    date: "January 2026",
+    description: "Comprehensive security assessment of smart contract architecture, identifying critical vulnerabilities in access control, reentrancy patterns, and economic attack vectors.",
+    severity: {
+      critical: 1,
+      high: 2,
+      medium: 3,
+      low: 4,
+      informational: 2
+    },
+    previewImage: "/images/reports/report.svg",
+    pdfPath: "/audits/classical-dark/report.pdf",
+    tags: ["Solidity", "DeFi", "ERC-20", "Access Control"]
+  },
+  {
+    id: "classical-dark-2",
+    title: "Token Contract Analysis",
+    protocol: "Token Protocol",
+    date: "January 2026",
+    description: "In-depth analysis of token implementation including minting logic, transfer restrictions, and compliance with ERC standards.",
+    severity: {
+      high: 1,
+      medium: 2,
+      low: 3,
+      informational: 5
+    },
+    previewImage: "/images/reports/report.svg",
+    pdfPath: "/audits/classical-dark/report.pdf",
+    tags: ["ERC-721", "NFT", "Metadata"]
+  },
+  {
+    id: "classical-dark-3",
+    title: "Protocol Security Review",
+    protocol: "Staking Protocol",
+    date: "January 2026",
+    description: "Security review of staking mechanisms, reward distribution logic, and governance integration points.",
+    severity: {
+      medium: 4,
+      low: 6,
+      informational: 3
+    },
+    previewImage: "/images/reports/report.svg",
+    pdfPath: "/audits/classical-dark/report.pdf",
+    tags: ["Staking", "Governance", "Rewards"]
   }
 ]; 

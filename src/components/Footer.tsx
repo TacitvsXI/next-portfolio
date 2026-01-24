@@ -911,7 +911,7 @@ export default function Footer() {
         
       <FooterContent>
           <PrimarySection>
-            <Logo>TacitusXI</Logo>
+            <Logo>TacitvsXI</Logo>
             <SecurityBadge>Security Researcher</SecurityBadge>
           <Description>
             {personalInfo.summary}
@@ -927,7 +927,7 @@ export default function Footer() {
                 <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z" />
               </svg>
             </SocialLink>
-            <SocialLink href="https://x.com/TacitusXI" target="_blank" rel="noopener noreferrer">
+            <SocialLink href="https://x.com/TacitvsXI" target="_blank" rel="noopener noreferrer">
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
                 <path d="M18.901 1.153h3.68l-8.04 9.19L24 22.846h-7.406l-5.8-7.584-6.638 7.584H.474l8.6-9.83L0 1.154h7.594l5.243 6.932ZM17.61 20.644h2.039L6.486 3.24H4.298Z" />
               </svg>
@@ -955,7 +955,7 @@ export default function Footer() {
         <FooterSection>
           <SectionTitle>Resources</SectionTitle>
           <LinksContainer>
-            <FooterLink href="https://github.com/TacitusXI" target="_blank" rel="noopener noreferrer">
+            <FooterLink href="https://github.com/TacitvsXI" target="_blank" rel="noopener noreferrer">
               GitHub Repository
             </FooterLink>
             <FooterLink href="/Ivan_Leskov_Web3_Solidity_Engineer.pdf" target="_blank">
@@ -973,7 +973,7 @@ export default function Footer() {
       
       <BottomBar>
           <Copyright>
-            © 2024 TacitusXI. All rights reserved. Security researcher & blockchain security expert.
+            © 2024 TacitvsXI. All rights reserved. Security researcher & blockchain security expert.
           </Copyright>
         <BottomLinks>
             <BottomLink href="#" onClick={() => openPolicyModal('privacy')}>

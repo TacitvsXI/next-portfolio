@@ -126,10 +126,10 @@ const createStaticApiEndpoints = () => {
     // Create a static GitHub API response
     const staticGithubData = {
       user: {
-        login: "TacitusXI",
+        login: "TacitvsXI",
         name: "Ivan Leskov",
         avatar_url: "./profile.jpg",
-        html_url: "https://github.com/TacitusXI",
+        html_url: "https://github.com/TacitvsXI",
         public_repos: 20,
         followers: 5,
         following: 10
@@ -137,7 +137,7 @@ const createStaticApiEndpoints = () => {
       repos: [
         {
           name: "next-portfolio",
-          html_url: "https://github.com/TacitusXI/next-portfolio",
+          html_url: "https://github.com/TacitvsXI/next-portfolio",
           description: "Personal portfolio website built with Next.js",
           stargazers_count: 5,
           forks_count: 2,
@@ -145,7 +145,7 @@ const createStaticApiEndpoints = () => {
         },
         {
           name: "blockchain-projects",
-          html_url: "https://github.com/TacitusXI/blockchain-projects",
+          html_url: "https://github.com/TacitvsXI/blockchain-projects",
           description: "Collection of blockchain and Web3 projects",
           stargazers_count: 12,
           forks_count: 4,
@@ -153,7 +153,7 @@ const createStaticApiEndpoints = () => {
         },
         {
           name: "smart-contracts",
-          html_url: "https://github.com/TacitusXI/smart-contracts",
+          html_url: "https://github.com/TacitvsXI/smart-contracts",
           description: "EVM-compatible smart contract templates and examples",
           stargazers_count: 8,
           forks_count: 3,
@@ -280,7 +280,7 @@ const createIpfsCompatibleFiles = () => {
               // For GitHub API, return static data
               if (origUrl.indexOf('/api/github') !== -1) {
                 return new Response(JSON.stringify({
-                  user: { login: "TacitusXI", name: "Ivan Leskov" },
+                  user: { login: "TacitvsXI", name: "Ivan Leskov" },
                   repos: [],
                   contributions: { totalCount: 0, weeks: [] }
                 }), {

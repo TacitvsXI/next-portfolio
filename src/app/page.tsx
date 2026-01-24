@@ -13,6 +13,7 @@ import RecommendationsSection from '@/components/sections/RecommendationsSection
 import HobbiesSection from '@/components/sections/HobbiesSection';
 import NotesSection from '@/components/sections/NotesSection';
 import PublicationsSection from '@/components/sections/PublicationsSection';
+import AuditsSection from '@/components/sections/AuditsSection';
 
 export default function Home() {
   return (
@@ -24,6 +25,7 @@ export default function Home() {
       <ExperienceSection />
       <ProjectsSection />
       <GitHubSection />
+      <AuditsSection />
       <PublicationsSection />
       <HobbiesSection />
       <RecommendationsSection />

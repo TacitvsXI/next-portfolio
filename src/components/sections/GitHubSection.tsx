@@ -654,7 +654,7 @@ const GitHubSection: React.FC = () => {
         
         // Get environment variables (they are exposed in the client when prefixed with NEXT_PUBLIC_)
         const token = process.env.NEXT_PUBLIC_GITHUB_TOKEN;
-        const username = process.env.NEXT_PUBLIC_GITHUB_USERNAME || 'TacitusXI';
+        const username = process.env.NEXT_PUBLIC_GITHUB_USERNAME || 'TacitvsXI';
         
         if (!token) {
           throw new Error('GitHub token not found in environment variables');
@@ -792,7 +792,7 @@ const GitHubSection: React.FC = () => {
         // Set fallback mock data
         const mockData: GitHubData = {
           profile: {
-            login: 'TacitusXI',
+            login: 'TacitvsXI',
             avatarUrl: 'https://avatars.githubusercontent.com/u/1234567',
             name: 'Ivan Leskov',
             bio: 'Software Engineer & Blockchain Developer',
@@ -809,7 +809,7 @@ const GitHubSection: React.FC = () => {
             {
               name: 'tacitus-digital-hub',
 description: 'Personal digital hub built with Next.js',
-              url: 'https://github.com/TacitusXI/next-portfolio',
+              url: 'https://github.com/TacitvsXI/next-portfolio',
               language: 'TypeScript',
               stars: 5,
               forks: 2
@@ -817,7 +817,7 @@ description: 'Personal digital hub built with Next.js',
             {
               name: 'blockchain-projects',
               description: 'Collection of blockchain and Web3 projects',
-              url: 'https://github.com/TacitusXI/blockchain-projects',
+              url: 'https://github.com/TacitvsXI/blockchain-projects',
               language: 'Solidity',
               stars: 12,
               forks: 4
@@ -825,7 +825,7 @@ description: 'Personal digital hub built with Next.js',
             {
               name: 'smart-contracts',
               description: 'EVM-compatible smart contract templates',
-              url: 'https://github.com/TacitusXI/smart-contracts',
+              url: 'https://github.com/TacitvsXI/smart-contracts',
               language: 'Solidity',
               stars: 8,
               forks: 3
