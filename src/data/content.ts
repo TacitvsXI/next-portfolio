@@ -592,21 +592,18 @@ export const reading = [
 // Security Audits
 export const audits: Audit[] = [
   {
-    id: "classical-dark-1",
-    title: "Smart Contract Security Audit",
-    protocol: "DeFi Protocol",
+    id: "olas-2026-01",
+    title: "Olas Protocol Security Audit",
+    protocol: "Olas (Autonolas)",
     date: "January 2026",
-    description: "Comprehensive security assessment of smart contract architecture, identifying critical vulnerabilities in access control, reentrancy patterns, and economic attack vectors.",
+    description: "Independent security audit of Olas protocol covering governance, registries, and tokenomics contracts. Identified novel vulnerabilities in L2 staking dispensers and tokenomics accumulator logic not detected by V12 AI auditor.",
     severity: {
-      critical: 1,
-      high: 2,
-      medium: 3,
-      low: 4,
-      informational: 2
+      medium: 1,
+      low: 1
     },
     previewImage: "/images/reports/report.svg",
-    pdfPath: "/audits/classical-dark/report.pdf",
-    tags: ["Solidity", "DeFi", "ERC-20", "Access Control"]
+    pdfPath: "/audits/olas-2026-01/report-classical-dark.pdf",
+    tags: ["Solidity", "Cross-Chain", "Staking", "Tokenomics", "L2 Bridges"]
   },
   {
     id: "classical-dark-2",
