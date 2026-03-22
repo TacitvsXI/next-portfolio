@@ -247,6 +247,28 @@ export const projects: Project[] = [
     }
   },
   {
+    title: "Tacitvs Quant Terminal",
+    period: "2025 - Present",
+    description: "Professional order flow trading terminal for Hyperliquid perpetuals. EV-first, maker-first execution with live candlestick charts, CVD, footprint heatmaps, tape analysis, and book imbalance. Built for signal validation before capital deployment. Work in progress.",
+    links: {
+      github: "https://github.com/TacitvsXI/Tacitvs-Quant-Terminal-TQT",
+      live: "https://tacitvs-quant-terminal-tqt.vercel.app"
+    },
+    githubInfo: {
+      stars: 0,
+      forks: 0,
+      languages: [
+        { name: "Python", percentage: 71.7 },
+        { name: "TypeScript", percentage: 23.4 },
+        { name: "Shell", percentage: 3.9 }
+      ],
+      topics: [
+        "python", "fastapi", "next-js", "trading-terminal", "order-flow",
+        "hyperliquid", "quant", "crypto-trading", "defi", "real-time"
+      ]
+    }
+  },
+  {
     title: "DeFi IL Hedge Bot",
     period: "February 2025",
     description: "A Python-based trading bot that hedges impermanent loss in Uniswap V2 liquidity pools using Binance perpetual contracts. Features backtesting framework with historical data analysis and automated hedging execution.",
@@ -606,20 +628,17 @@ export const audits: Audit[] = [
     tags: ["Solidity", "Cross-Chain", "Staking", "Tokenomics", "L2 Bridges"]
   },
   {
-    id: "classical-dark-2",
-    title: "Token Contract Analysis",
-    protocol: "Token Protocol",
-    date: "January 2026",
-    description: "In-depth analysis of token implementation including minting logic, transfer restrictions, and compliance with ERC standards.",
+    id: "chainlink-2026-03",
+    title: "Chainlink Payment Abstraction V2",
+    protocol: "Chainlink",
+    date: "March 2026",
+    description: "Independent security review of Chainlink's auction-based fee token conversion system. Identified 5 low-severity findings across auction lifecycle management, bid validation paths, cross-auction settlement coupling, and price feed timestamp assumptions.",
     severity: {
-      high: 1,
-      medium: 2,
-      low: 3,
-      informational: 5
+      low: 5
     },
     previewImage: "/images/reports/report.svg",
-    pdfPath: "/audits/classical-dark/report.pdf",
-    tags: ["ERC-721", "NFT", "Metadata"]
+    pdfPath: "/audits/chainlink-2026-03/report-classical-dark.pdf",
+    tags: ["Solidity", "Auctions", "Chainlink", "CowSwap", "Price Feeds"]
   },
   {
     id: "classical-dark-3",

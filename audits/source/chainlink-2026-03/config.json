@@ -1,0 +1,24 @@
+{
+  "protocol_name": "Chainlink Payment Abstraction V2",
+  "date": "2026-03-22",
+  "protocol_description": "Chainlink Payment Abstraction V2 is an auction-based system for converting accumulated fee tokens (ERC-20) into LINK via Dutch auction and CowSwap solver integration. The protocol manages concurrent auctions per asset with configurable parameters, price feeds from Chainlink Data Streams, and Chainlink Automation-driven lifecycle management.",
+  "commit_hash": "2026-03-chainlink",
+  "scope": "BaseAuction.sol, GPV2CompatibleAuction.sol, PriceManager.sol — auction lifecycle, bid validation, settlement, price feed integration",
+  "roles": "ASSET_ADMIN_ROLE (Timelock), AUCTION_WORKER_ROLE (WorkflowRouter), PRICE_ADMIN_ROLE (trusted transmitter), CowSwap Solvers (external)",
+  "audit_objective": "Independent security review of auction mechanics, bid validation, settlement logic, and price feed integration in the Chainlink Payment Abstraction V2 system",
+  "blockchain_network": "ethereum",
+  "issues": {
+    "high": 0,
+    "medium": 0,
+    "low": 5,
+    "info": 0
+  },
+  "key_risks": "Mid-auction parameter mutation, cross-auction settlement coupling, inconsistent fill path constraints, price feed timestamp assumptions, keeper performData trust",
+  "top_recommendations": "Guard setMinBidUsdValue with _whenNoLiveAuctions, add upper-bound check on observationsTimestamp, re-enforce auction-end predicate in performUpkeep",
+  "findings": {
+    "high": "No high severity vulnerabilities identified.",
+    "medium": "No medium severity vulnerabilities identified.",
+    "low": "L-01: setMinBidUsdValue() allows mutation of bid admissibility during active auctions — breaks invariant that auction parameters remain static during lifecycle.\n\nL-02: _onAuctionEnd performs contract-global LINK settlement rather than auction-scoped — concurrent auction closures have cross-auction side effects.\n\nL-03: isValidSignature() and bid() enforce non-equivalent minimum fill constraints — CowSwap solvers can fill orders below minBidUsdValue.\n\nL-04: transmit() assumes monotonic observationsTimestamp but does not enforce upper bound — future timestamps silently extend price validity window.\n\nL-05: performUpkeep() does not re-enforce the auction-end predicate before destructive settlement — treats performData as trusted input.",
+    "info": "No informational findings."
+  }
+}

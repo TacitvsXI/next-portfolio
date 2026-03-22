@@ -300,6 +300,7 @@ export default function ProjectsSection() {
       "LeskoDEX": "./images/lesko-dex.webp",
       "LIQUID-DEX": "./images/liquid-dex.webp",
       "Tacitus Swap": "./images/tacitus-swap.webp",
+      "Tacitvs Quant Terminal": "./images/tqt.png",
       "DeFi IL Hedge Bot": "./images/defi-hedge-bot.webp",
       "Ledger Signer": "./images/ledger-project.webp",
       "Lottery": "./images/lottery.webp"

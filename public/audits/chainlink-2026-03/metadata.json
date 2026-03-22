@@ -1,0 +1,14 @@
+{
+  "slug": "chainlink-2026-03",
+  "timestamp": "2026-03-22T00:00:00.000Z",
+  "sha256": "",
+  "protocol_name": "Chainlink Payment Abstraction V2",
+  "blockchain_network": "ethereum",
+  "audit_url": "https://tacitvs.eth.limo/audit/chainlink-2026-03",
+  "files": {
+    "final_pdf": "report-final.pdf",
+    "dark_pdf": "report-dark.pdf",
+    "light_pdf": "report-light.pdf",
+    "source_markdown": "report.md"
+  }
+}
